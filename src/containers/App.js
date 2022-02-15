@@ -8,16 +8,10 @@ function App() {
     <div className="App">
       <header className="App-header">        
         <p>
-          Edit <code>./App.js</code> and save to reload.
+         live action
+         
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
