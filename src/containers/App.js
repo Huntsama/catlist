@@ -8,14 +8,12 @@ import SearchBox from '../components/Searchbox';
 function App() {
   const [cats, setCats] = useState([])
   const [searchfield, setSearchfield] = useState('')
-  const [count, setCount] = useState(0) // for demo purposes
 
   useEffect(()=> {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response=> response.json())
       .then(users => {setCats(users)});
-    // console.log(count)
-  },[]) // if you add count, only run if count changes.
+  },[]) 
 
   const onSearchChange = (event) => {
     setSearchfield(event.target.value)
@@ -30,7 +28,7 @@ function App() {
     (
       <div className='tc'>
         <h1 className='f1'>cats</h1>
-        <button onClick={()=>setCount(count+1)}>Click Me!</button>
+        
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           <CardList cats={filteredcats} />
